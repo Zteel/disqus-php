@@ -20,10 +20,6 @@ if (!defined('DISQUS_API_HOST')) {
 }
 define('DISQUS_API_VERSION', '0.0.1');
 
-function dsq_json_decode($data) {
-    return json_decode($data);
-}
-
 global $DISQUS_API_INTERFACES;
 
 $DISQUS_API_INTERFACES = dsq_json_decode(file_get_contents(dirname(__FILE__) . '/interfaces.json'));
