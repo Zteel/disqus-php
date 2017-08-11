@@ -1,0 +1,23 @@
+{
+  "name": "disqus/disqus-php",
+  "type": "project",
+  "homepage": "http://disqus.com/",
+  "description": "Implementation of the Disqus API.",
+  "version": "0.1.1",
+  "authors": [
+    {
+      "name": "DISQUS",
+      "email": "team@disqus.com"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "disqusapi/url.php",
+      "disqusapi/disqusapi.php"
+    ]
+  },
+  "require": {
+    "php": ">=5.3,<8.0",
+    "ext-json": "*"
+  }
+}

@@ -20,18 +20,8 @@ if (!defined('DISQUS_API_HOST')) {
 }
 define('DISQUS_API_VERSION', '0.0.1');
 
-require_once(dirname(__FILE__) . '/url.php');
-
-if (!extension_loaded('json')) {
-	require_once(dirname(__FILE__) . '/json.php');
-	function dsq_json_decode($data) {
-		$json = new JSON;
-		return $json->unserialize($data);
-	}
-} else {
-	function dsq_json_decode($data) {
-		return json_decode($data);
-	}
+function dsq_json_decode($data) {
+    return json_decode($data);
 }
 
 global $DISQUS_API_INTERFACES;
